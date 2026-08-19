@@ -39,7 +39,7 @@ export function ProductCard({ product }: { product: Product }) {
               {product.rating}
             </span>
           </div>
-          <p className="text-xs italic text-muted-foreground">{product.swahili} · {product.county}</p>
+          <p className="text-xs italic text-muted-foreground">{product.subtitle} · {product.county}</p>
         </div>
 
         <div className="flex items-baseline gap-2">
