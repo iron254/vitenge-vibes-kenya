@@ -60,7 +60,7 @@ export function CartDrawer() {
       <aside className="relative flex h-full w-full max-w-md flex-col border-l border-border bg-background shadow-lift animate-rise">
         <div className="flex items-center justify-between border-b border-border px-5 py-4">
           <h2 className="font-display text-lg font-bold">
-            {stage === "cart" ? `Kikapu (${count})` : stage === "done" ? "Malipo yamekamilika" : "Lipa na M-Pesa"}
+            {stage === "cart" ? `Cart (${count})` : stage === "done" ? "Malipo yamekamilika" : "Lipa na M-Pesa"}
           </h2>
           <button onClick={() => setOpen(false)} aria-label="Close" className="rounded-sm p-1 hover:bg-muted">
             <X className="h-5 w-5" />
@@ -71,7 +71,7 @@ export function CartDrawer() {
           {stage === "cart" && (
             lines.length === 0 ? (
               <p className="mt-16 text-center text-sm text-muted-foreground">
-                Your kikapu is empty. Add a kitenge piece to begin.
+                Your cart is empty. Add a kitenge piece to begin.
               </p>
             ) : (
               <ul className="space-y-4">

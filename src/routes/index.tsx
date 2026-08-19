@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Handmade Vitenge dresses, shirts, blazers and accessories tailored in Kenya. Order online and pay with M-Pesa only. Countrywide delivery.",
+          "Handmade Vitenge dresses, shirts, blazers and accessories tailored in Kenya. Order online and pay with M-Pesa. Countrywide delivery.",
       },
       { property: "og:title", content: "KitengeDuka — Kenyan Vitenge Fashion" },
       {
@@ -40,7 +40,7 @@ function Home() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 md:grid-cols-2 md:py-20">
           <div className="animate-rise">
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]">
-              <span className="h-2 w-2 rounded-full bg-mpesa" /> M-Pesa only checkout
+              <span className="h-2 w-2 rounded-full bg-mpesa" /> Pay with M-Pesa
             </span>
             <h1 className="mt-5 font-display text-5xl font-bold leading-[0.95] text-balance-tight md:text-6xl">
               Vitenge for the <span className="text-terracotta">everyday</span> Kenyan.
@@ -67,7 +67,7 @@ function Home() {
               {[
                 ["1,400+", "Orders sewn"],
                 ["47", "Counties served"],
-                ["4.8★", "Customer rating"],
+                ["3", "Day delivery"],
               ].map(([value, label]) => (
                 <div key={label}>
                   <dt className="font-display text-2xl font-bold">{value}</dt>

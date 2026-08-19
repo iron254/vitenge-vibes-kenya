@@ -2,6 +2,7 @@ import p1 from "@/assets/p1.jpg";
 import p2 from "@/assets/p2.jpg";
 import p3 from "@/assets/p3.jpg";
 import p4 from "@/assets/p4.jpg";
+import fabric from "@/assets/fabric.jpg";
 
 export type Product = {
   id: string;
@@ -325,7 +326,7 @@ export const products: Product[] = [
     name: "Gikomba Wax Print · 6m",
     subtitle: "Cotton wax fabric by the roll",
     price: 3500,
-    image: "",
+    image: fabric,
     category: "Fabric",
     sizes: ["6 metres"],
     county: "Nairobi",
@@ -336,7 +337,7 @@ export const products: Product[] = [
     name: "Kongowea Wax Print · 3m",
     subtitle: "Cotton wax fabric half roll",
     price: 1900,
-    image: "",
+    image: fabric,
     category: "Fabric",
     sizes: ["3 metres"],
     county: "Mombasa",
