@@ -47,7 +47,7 @@ export function Header() {
             className="relative inline-flex items-center gap-2 rounded-sm bg-foreground px-3 py-2 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5"
           >
             <ShoppingBag className="h-4 w-4" />
-            <span className="hidden sm:inline">Kikapu</span>
+            <span className="hidden sm:inline">Cart</span>
             {count > 0 && (
               <span className="absolute -right-2 -top-2 grid h-5 min-w-5 place-items-center rounded-full bg-accent px-1 text-xs font-bold text-accent-foreground">
                 {count}

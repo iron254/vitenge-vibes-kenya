@@ -19,7 +19,7 @@ export const Route = createFileRoute("/shop")({
   component: Shop,
 });
 
-const categories = ["All", "Women", "Men", "Accessories"] as const;
+const categories = ["All", "Women", "Men", "Accessories", "Fabric"] as const;
 const sorts = ["Featured", "Price: low to high", "Price: high to low"] as const;
 
 function Shop() {
@@ -44,7 +44,7 @@ function Shop() {
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-terracotta">Duka</p>
         <h1 className="mt-2 font-display text-5xl font-bold">All Vitenge</h1>
         <p className="mt-3 max-w-xl text-muted-foreground">
-          Every piece is made-to-order in Kenya. Prices in Kenyan shillings, payment via M-Pesa only.
+          Every piece is made-to-order in Kenya. Prices in Kenyan shillings, payment via M-Pesa.
         </p>
       </header>
 
@@ -91,7 +91,7 @@ function Shop() {
         ))}
       </div>
       {list.length === 0 && (
-        <p className="py-20 text-center text-muted-foreground">Hakuna kitu hapa. Try another filter.</p>
+        <p className="py-20 text-center text-muted-foreground">Nothing here. Try another filter.</p>
       )}
     </div>
   );

@@ -19,7 +19,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 const faqs = [
-  { q: "Which payment methods do you accept?", a: "M-Pesa only — Buy Goods Till 5203041 via STK push at checkout." },
+  { q: "Which payment methods do you accept?", a: "M-Pesa via STK push at checkout." },
   { q: "How long is delivery?", a: "Nairobi 1 day, other counties 2–3 days through our courier partners." },
   { q: "Can I order a custom size?", a: "Yes. WhatsApp your bust, waist and length measurements and we sew to fit." },
   { q: "Do you accept returns?", a: "Exchanges within 7 days if the piece is unworn and tags are intact." },
@@ -37,8 +37,8 @@ function Contact() {
           Sizing questions, bulk orders for harusi, or help with an M-Pesa payment — we reply within a few hours.
         </p>
         <ul className="mt-8 space-y-4 text-sm">
-          <li className="flex items-center gap-3"><Phone className="h-5 w-5 text-terracotta" /> 0712 345 678</li>
-          <li className="flex items-center gap-3"><MessageCircle className="h-5 w-5 text-mpesa" /> WhatsApp 0712 345 678</li>
+          <li className="flex items-center gap-3"><Phone className="h-5 w-5 text-terracotta" /> 0769 535 484</li>
+          <li className="flex items-center gap-3"><MessageCircle className="h-5 w-5 text-mpesa" /> WhatsApp 0769 535 484</li>
           <li className="flex items-center gap-3"><MapPin className="h-5 w-5 text-primary" /> Biashara Street, Nairobi CBD</li>
         </ul>
 
@@ -90,7 +90,7 @@ function Contact() {
         <button className="mt-5 w-full rounded-sm bg-foreground px-4 py-3 text-sm font-bold text-background">
           Tuma ujumbe
         </button>
-        {sent && <p className="mt-3 text-sm font-semibold text-mpesa">Asante! We'll get back to you shortly.</p>}
+        {sent && <p className="mt-3 text-sm font-semibold text-mpesa">Thank you! We'll get back to you shortly.</p>}
       </form>
     </div>
   );

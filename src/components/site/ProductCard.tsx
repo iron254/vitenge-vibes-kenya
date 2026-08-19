@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Star } from "lucide-react";
 import { KES, type Product } from "@/lib/products";
 import { useCart } from "@/lib/cart";
 
@@ -32,13 +31,7 @@ export function ProductCard({ product }: { product: Product }) {
 
       <div className="flex flex-1 flex-col gap-3 p-4">
         <div>
-          <div className="flex items-start justify-between gap-2">
-            <h3 className="font-display text-lg font-bold leading-tight">{product.name}</h3>
-            <span className="flex shrink-0 items-center gap-1 text-xs text-muted-foreground">
-              <Star className="h-3.5 w-3.5 fill-accent text-accent" />
-              {product.rating}
-            </span>
-          </div>
+          <h3 className="font-display text-lg font-bold leading-tight">{product.name}</h3>
           <p className="text-xs italic text-muted-foreground">{product.subtitle} · {product.county}</p>
         </div>
 
@@ -69,7 +62,7 @@ export function ProductCard({ product }: { product: Product }) {
           onClick={() => add(product, size)}
           className="mt-auto rounded-sm bg-accent px-4 py-2.5 text-sm font-bold text-accent-foreground transition-colors hover:bg-terracotta hover:text-background"
         >
-          Add to kikapu
+          Add to cart
         </button>
       </div>
     </article>
