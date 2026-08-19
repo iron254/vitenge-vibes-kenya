@@ -149,7 +149,7 @@ export function CartDrawer() {
                 onClick={() => setStage("details")}
                 className="flex w-full items-center justify-center gap-2 rounded-sm bg-mpesa px-4 py-3 text-sm font-bold text-mpesa-foreground transition-transform hover:-translate-y-0.5"
               >
-                <Smartphone className="h-4 w-4" /> Lipa na M-Pesa
+                <Smartphone className="h-4 w-4" /> Pay with M-Pesa
               </button>
             ) : (
               <button
