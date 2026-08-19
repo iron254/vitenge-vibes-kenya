@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -13,7 +13,7 @@ export function Footer() {
             Vitenge cut and sewn by Kenyan tailors. Pay the way we all pay — M-Pesa.
           </p>
           <p className="mt-5 inline-flex items-center gap-2 rounded-sm bg-mpesa px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-mpesa-foreground">
-            M-Pesa only
+            Pay with M-Pesa
           </p>
         </div>
         <div>
@@ -27,9 +27,9 @@ export function Footer() {
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Find us</p>
           <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> 0712 345 678</li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> 0769 535 484</li>
             <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Biashara St, Nairobi</li>
-            <li className="flex items-center gap-2"><Instagram className="h-4 w-4" /> @kitengeduka</li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> <a href="mailto:oluochraymond6@gmail.com" className="hover:text-accent">oluochraymond6@gmail.com</a></li>
           </ul>
         </div>
       </div>

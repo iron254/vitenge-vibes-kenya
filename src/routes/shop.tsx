@@ -91,7 +91,7 @@ function Shop() {
         ))}
       </div>
       {list.length === 0 && (
-        <p className="py-20 text-center text-muted-foreground">Hakuna kitu hapa. Try another filter.</p>
+        <p className="py-20 text-center text-muted-foreground">Nothing here. Try another filter.</p>
       )}
     </div>
   );

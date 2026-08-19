@@ -36,9 +36,9 @@ export function CartDrawer() {
 
   const pay = () => {
     const msisdn = normalize(phone);
-    if (!name.trim()) return setError("Tafadhali weka jina lako (your name).");
+    if (!name.trim()) return setError("Please enter your name.");
     if (!town.trim()) return setError("Add the town for delivery.");
-    if (!msisdn) return setError("Enter a valid Safaricom number, e.g. 0712 345 678.");
+    if (!msisdn) return setError("Enter a valid Safaricom number, e.g. 0769 535 484.");
     setError(null);
     setStage("pending");
     window.setTimeout(() => {
@@ -60,7 +60,7 @@ export function CartDrawer() {
       <aside className="relative flex h-full w-full max-w-md flex-col border-l border-border bg-background shadow-lift animate-rise">
         <div className="flex items-center justify-between border-b border-border px-5 py-4">
           <h2 className="font-display text-lg font-bold">
-            {stage === "cart" ? `Cart (${count})` : stage === "done" ? "Malipo yamekamilika" : "Lipa na M-Pesa"}
+            {stage === "cart" ? `Cart (${count})` : stage === "done" ? "Payment complete" : "Pay with M-Pesa"}
           </h2>
           <button onClick={() => setOpen(false)} aria-label="Close" className="rounded-sm p-1 hover:bg-muted">
             <X className="h-5 w-5" />
@@ -102,11 +102,11 @@ export function CartDrawer() {
           {stage === "details" && (
             <div className="space-y-4">
             <div className="rounded-sm bg-mpesa/10 p-3 text-sm">
-              <p className="font-semibold text-foreground">Lipa na M-Pesa</p>
+              <p className="font-semibold text-foreground">Pay with M-Pesa</p>
               <p className="text-muted-foreground">An STK push will pop up on your phone. Enter your M-Pesa PIN to confirm.</p>
             </div>
-              <Field label="Jina kamili / Full name" value={name} onChange={setName} placeholder="Achieng Wanjiru" />
-              <Field label="Namba ya simu / Safaricom number" value={phone} onChange={setPhone} placeholder="0712 345 678" inputMode="tel" />
+              <Field label="Full name" value={name} onChange={setName} placeholder="Achieng Wanjiru" />
+              <Field label="Safaricom number" value={phone} onChange={setPhone} placeholder="0769 535 484" inputMode="tel" />
               <Field label="Delivery town / estate" value={town} onChange={setTown} placeholder="Kisumu CBD" />
               {error && <p className="text-sm font-medium text-destructive">{error}</p>}
             </div>
@@ -125,7 +125,7 @@ export function CartDrawer() {
           {stage === "done" && (
             <div className="mt-16 flex flex-col items-center gap-4 text-center">
               <CheckCircle2 className="h-12 w-12 text-mpesa" />
-              <p className="font-display text-xl font-bold">Asante sana, {name.split(" ")[0]}!</p>
+              <p className="font-display text-xl font-bold">Thank you, {name.split(" ")[0]}!</p>
               <p className="max-w-xs text-sm text-muted-foreground">
                 Payment received. M-Pesa code <span className="font-bold text-foreground">{ref}</span>. We'll call you before delivery to {town}.
               </p>
