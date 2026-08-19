@@ -10,10 +10,10 @@ export function Footer() {
             Kitenge<span className="text-accent">Duka</span>
           </p>
           <p className="mt-3 max-w-sm text-sm text-primary-foreground/75">
-            Vitenge cut and sewn by Kenyan tailors. Pay the way we all pay — Lipa na M-Pesa.
+            Vitenge cut and sewn by Kenyan tailors. Pay the way we all pay — M-Pesa.
           </p>
           <p className="mt-5 inline-flex items-center gap-2 rounded-sm bg-mpesa px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-mpesa-foreground">
-            M-Pesa only · Till 5203041
+            M-Pesa only
           </p>
         </div>
         <div>
@@ -25,7 +25,7 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Tupate</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Find us</p>
           <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
             <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> 0712 345 678</li>
             <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Biashara St, Nairobi</li>

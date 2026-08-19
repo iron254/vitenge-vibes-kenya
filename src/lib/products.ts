@@ -6,7 +6,7 @@ import p4 from "@/assets/p4.jpg";
 export type Product = {
   id: string;
   name: string;
-  swahili: string;
+  subtitle: string;
   price: number;
   compareAt?: number;
   image: string;
@@ -21,8 +21,8 @@ export type Product = {
 export const products: Product[] = [
   {
     id: "shati-jua",
-    name: "Jua Camp Shirt",
-    swahili: "Shati la Jua",
+    name: "Sun Camp Shirt",
+    subtitle: "Short-sleeve men's shirt",
     price: 2800,
     compareAt: 3500,
     image: p1,
@@ -36,7 +36,7 @@ export const products: Product[] = [
   {
     id: "gauni-bahari",
     name: "Bahari Maxi Dress",
-    swahili: "Gauni la Bahari",
+    subtitle: "One-piece flowing maxi",
     price: 4900,
     image: p2,
     category: "Women",
@@ -48,8 +48,8 @@ export const products: Product[] = [
   },
   {
     id: "koti-msitu",
-    name: "Msitu Tailored Blazer",
-    swahili: "Koti la Msitu",
+    name: "Forest Tailored Blazer",
+    subtitle: "Men's fitted blazer",
     price: 6500,
     compareAt: 7800,
     image: p3,
@@ -62,8 +62,8 @@ export const products: Product[] = [
   },
   {
     id: "kilemba-set",
-    name: "Kilemba Headwrap + Tote",
-    swahili: "Kilemba na Mkoba",
+    name: "Headwrap + Tote Set",
+    subtitle: "Matching accessories",
     price: 1950,
     image: p4,
     category: "Accessories",

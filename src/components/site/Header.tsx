@@ -16,23 +16,6 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/85 backdrop-blur-md">
-      <div className="overflow-hidden bg-primary text-primary-foreground">
-        <div className="animate-[marquee_32s_linear_infinite] flex w-max gap-10 py-1.5 text-[11px] uppercase tracking-[0.28em]">
-          {Array.from({ length: 2 }).map((_, i) => (
-            <span key={i} className="flex gap-10">
-              <span>Lipa na M-Pesa</span>
-              <span>Free delivery over KSh 5,000</span>
-              <span>Tailored in Kenya</span>
-              <span>Countrywide shipping</span>
-              <span>Lipa na M-Pesa</span>
-              <span>Free delivery over KSh 5,000</span>
-              <span>Tailored in Kenya</span>
-              <span>Countrywide shipping</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
         <Link to="/" className="flex items-center gap-2">
           <span className="grid h-9 w-9 place-items-center rounded-sm bg-accent font-display text-lg font-bold text-accent-foreground edge-ink">

@@ -31,7 +31,7 @@ function Shop() {
     let out: Product[] = products.filter(
       (p) =>
         (category === "All" || p.category === category) &&
-        (p.name + p.swahili + p.county).toLowerCase().includes(query.toLowerCase()),
+        (p.name + p.subtitle + p.county).toLowerCase().includes(query.toLowerCase()),
     );
     if (sort === "Price: low to high") out = [...out].sort((a, b) => a.price - b.price);
     if (sort === "Price: high to low") out = [...out].sort((a, b) => b.price - a.price);
