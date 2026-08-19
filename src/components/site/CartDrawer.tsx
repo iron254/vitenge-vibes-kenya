@@ -3,7 +3,7 @@ import { CheckCircle2, Loader2, Minus, Plus, Smartphone, Trash2, X } from "lucid
 import { useCart } from "@/lib/cart";
 import { KES } from "@/lib/products";
 
-const TILL = "5203041";
+const TILL = "";
 
 type Stage = "cart" | "details" | "pending" | "done";
 
@@ -101,10 +101,10 @@ export function CartDrawer() {
 
           {stage === "details" && (
             <div className="space-y-4">
-              <div className="rounded-sm bg-mpesa/10 p-3 text-sm">
-                <p className="font-semibold text-foreground">Buy Goods Till {TILL}</p>
-                <p className="text-muted-foreground">An STK push will pop up on your phone. Enter your M-Pesa PIN to confirm.</p>
-              </div>
+            <div className="rounded-sm bg-mpesa/10 p-3 text-sm">
+              <p className="font-semibold text-foreground">Lipa na M-Pesa</p>
+              <p className="text-muted-foreground">An STK push will pop up on your phone. Enter your M-Pesa PIN to confirm.</p>
+            </div>
               <Field label="Jina kamili / Full name" value={name} onChange={setName} placeholder="Achieng Wanjiru" />
               <Field label="Namba ya simu / Safaricom number" value={phone} onChange={setPhone} placeholder="0712 345 678" inputMode="tel" />
               <Field label="Delivery town / estate" value={town} onChange={setTown} placeholder="Kisumu CBD" />
