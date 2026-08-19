@@ -8,7 +8,7 @@ import { ProductCard } from "@/components/site/ProductCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "KitengeDuka — Kenyan Vitenge Fashion, Lipa na M-Pesa" },
+      { title: "KitengeDuka — Kenyan Vitenge Fashion, M-Pesa Checkout" },
       {
         name: "description",
         content:
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "KitengeDuka — Kenyan Vitenge Fashion" },
       {
         property: "og:description",
-        content: "Vitenge cut and sewn by Kenyan tailors. Lipa na M-Pesa, delivered countrywide.",
+        content: "Vitenge cut and sewn by Kenyan tailors. M-Pesa checkout, delivered countrywide.",
       },
     ],
   }),
@@ -25,9 +25,9 @@ export const Route = createFileRoute("/")({
 });
 
 const testimonials = [
-  { name: "Wanjiku M.", town: "Thika", text: "Nilipata gauni langu ndani ya siku mbili. Ubora ni wa hali ya juu!" },
+  { name: "Wanjiku M.", town: "Thika", text: "I got my dress within two days. The quality is excellent!" },
   { name: "Brian O.", town: "Kisumu", text: "The blazer fits perfectly and M-Pesa checkout took ten seconds." },
-  { name: "Amina S.", town: "Mombasa", text: "Prints are bold and the tailoring is clean. Nitarudi tena." },
+  { name: "Amina S.", town: "Mombasa", text: "Prints are bold and the tailoring is clean. I will definitely come back." },
 ];
 
 function Home() {
@@ -46,8 +46,8 @@ function Home() {
               Vitenge for the <span className="text-terracotta">everyday</span> Kenyan.
             </h1>
             <p className="mt-5 max-w-md text-base text-muted-foreground">
-              Bold wax prints, cut and sewn by tailors in Nairobi, Kisumu and Mombasa. Order today, lipa na M-Pesa,
-              tunakuletea popote Kenya.
+              Bold wax prints, cut and sewn by tailors in Nairobi, Kisumu and Mombasa. Order today, pay with M-Pesa,
+              we will deliver anywhere in Kenya.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
@@ -98,7 +98,7 @@ function Home() {
       <section className="border-b border-border bg-card">
         <div className="mx-auto grid max-w-6xl gap-6 px-4 py-10 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: Smartphone, title: "Lipa na M-Pesa", body: "STK push to your Safaricom line. No cards needed." },
+            { icon: Smartphone, title: "Pay with M-Pesa", body: "STK push to your Safaricom line. No cards needed." },
             { icon: Scissors, title: "Tailored locally", body: "Every piece sewn by Kenyan artisans, not imported." },
             { icon: Truck, title: "Countrywide delivery", body: "Free above KSh 5,000. 1–3 days via matatu courier." },
             { icon: Ruler, title: "Free size advice", body: "WhatsApp us measurements for a custom fit." },
@@ -116,8 +116,8 @@ function Home() {
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-terracotta">Mavazi mapya</p>
-            <h2 className="mt-2 font-display text-4xl font-bold">This week's drop</h2>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-terracotta">New arrivals</p>
+            <h2 className="mt-2 font-display text-4xl font-bold">This week&apos;s drop</h2>
           </div>
           <Link to="/shop" className="text-sm font-semibold underline decoration-accent decoration-2 underline-offset-4">
             See everything
@@ -142,7 +142,7 @@ function Home() {
             className="rounded-sm object-cover"
           />
           <div>
-            <h2 className="font-display text-4xl font-bold">Kila kitenge kina hadithi</h2>
+            <h2 className="font-display text-4xl font-bold">Every print has a story</h2>
             <p className="mt-4 text-primary-foreground/80">
               We source wax prints from Gikomba and Kongowea markets, wash and pre-shrink every metre, then hand them to
               tailors who have been cutting kitenge for decades. Nothing here is mass produced.
@@ -160,7 +160,7 @@ function Home() {
 
       {/* Testimonials */}
       <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="font-display text-4xl font-bold">Wateja wanasema</h2>
+        <h2 className="font-display text-4xl font-bold">What customers say</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {testimonials.map((t) => (
             <blockquote key={t.name} className="rounded-sm bg-card p-6 edge-ink">
@@ -177,10 +177,9 @@ function Home() {
       <section className="mx-auto max-w-6xl px-4 pb-4">
         <div className="rounded-sm kitenge-pattern p-1">
           <div className="rounded-sm bg-background px-6 py-12 text-center">
-            <h2 className="font-display text-4xl font-bold">Ready? Lipa na M-Pesa.</h2>
+            <h2 className="font-display text-4xl font-bold">Ready? Pay with M-Pesa.</h2>
             <p className="mx-auto mt-3 max-w-lg text-sm text-muted-foreground">
-              Buy Goods Till <strong className="text-foreground">5203041</strong>. Add to kikapu, enter your Safaricom
-              number, approve the STK push. That's it.
+              Add to your cart, enter your Safaricom number, approve the STK push. That&apos;s it.
             </p>
             <Link
               to="/shop"
