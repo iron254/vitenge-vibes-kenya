@@ -10,10 +10,10 @@ export function Footer() {
             Kitenge<span className="text-accent">Duka</span>
           </p>
           <p className="mt-3 max-w-sm text-sm text-primary-foreground/75">
-            Vitenge cut and sewn by Kenyan tailors. Pay the way we all pay — M-Pesa.
+            Vitenge cut and sewn by Kenyan tailors, delivered across Kenya.
           </p>
-          <p className="mt-5 inline-flex items-center gap-2 rounded-sm bg-mpesa px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-mpesa-foreground">
-            Pay with M-Pesa
+          <p className="mt-5 inline-flex items-center gap-2 rounded-sm bg-accent px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-accent-foreground">
+            Made in Kenya
           </p>
         </div>
         <div>

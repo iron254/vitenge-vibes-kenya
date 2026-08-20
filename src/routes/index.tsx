@@ -8,16 +8,16 @@ import { ProductCard } from "@/components/site/ProductCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "KitengeDuka — Kenyan Vitenge Fashion, M-Pesa Checkout" },
+      { title: "KitengeDuka — Kenyan Vitenge Fashion Made in Kenya" },
       {
         name: "description",
         content:
-          "Handmade Vitenge dresses, shirts, blazers and accessories tailored in Kenya. Order online and pay with M-Pesa. Countrywide delivery.",
+          "Handmade Vitenge dresses, shirts, blazers and accessories tailored in Kenya. Order online with countrywide delivery.",
       },
       { property: "og:title", content: "KitengeDuka — Kenyan Vitenge Fashion" },
       {
         property: "og:description",
-        content: "Vitenge cut and sewn by Kenyan tailors. M-Pesa checkout, delivered countrywide.",
+        content: "Vitenge cut and sewn by Kenyan tailors, delivered countrywide.",
       },
     ],
   }),
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
 
 const testimonials = [
   { name: "Wanjiku M.", town: "Thika", text: "I got my dress within two days. The quality is excellent!" },
-  { name: "Brian O.", town: "Kisumu", text: "The blazer fits perfectly and M-Pesa checkout took ten seconds." },
+  { name: "Brian O.", town: "Kisumu", text: "The blazer fits perfectly and checkout took ten seconds." },
   { name: "Amina S.", town: "Mombasa", text: "Prints are bold and the tailoring is clean. I will definitely come back." },
 ];
 
@@ -40,14 +40,14 @@ function Home() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 md:grid-cols-2 md:py-20">
           <div className="animate-rise">
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]">
-              <span className="h-2 w-2 rounded-full bg-mpesa" /> Pay with M-Pesa
+              <span className="h-2 w-2 rounded-full bg-terracotta" /> Made in Kenya
             </span>
             <h1 className="mt-5 font-display text-5xl font-bold leading-[0.95] text-balance-tight md:text-6xl">
               Vitenge for the <span className="text-terracotta">everyday</span> Kenyan.
             </h1>
             <p className="mt-5 max-w-md text-base text-muted-foreground">
-              Bold wax prints, cut and sewn by tailors in Nairobi, Kisumu and Mombasa. Order today, pay with M-Pesa,
-              we will deliver anywhere in Kenya.
+              Bold wax prints, cut and sewn by tailors in Nairobi, Kisumu and Mombasa. Order today and we will
+              deliver anywhere in Kenya.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
@@ -98,7 +98,7 @@ function Home() {
       <section className="border-b border-border bg-card">
         <div className="mx-auto grid max-w-6xl gap-6 px-4 py-10 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: Smartphone, title: "Pay with M-Pesa", body: "STK push to your Safaricom line. No cards needed." },
+            { icon: Smartphone, title: "Fast phone checkout", body: "Order from your phone in under a minute." },
             { icon: Scissors, title: "Tailored locally", body: "Every piece sewn by Kenyan artisans, not imported." },
             { icon: Truck, title: "Countrywide delivery", body: "Free above KSh 5,000. 1–3 days via matatu courier." },
             { icon: Ruler, title: "Free size advice", body: "WhatsApp us measurements for a custom fit." },
@@ -173,17 +173,17 @@ function Home() {
         </div>
       </section>
 
-      {/* M-Pesa CTA */}
+      {/* Closing CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-4">
         <div className="rounded-sm kitenge-pattern p-1">
           <div className="rounded-sm bg-background px-6 py-12 text-center">
-            <h2 className="font-display text-4xl font-bold">Ready? Pay with M-Pesa.</h2>
+            <h2 className="font-display text-4xl font-bold">Ready to wear your print?</h2>
             <p className="mx-auto mt-3 max-w-lg text-sm text-muted-foreground">
-              Add to your cart, enter your Safaricom number, approve the STK push. That&apos;s it.
+              Add to your cart, enter your details, confirm the order. That&apos;s it.
             </p>
             <Link
               to="/shop"
-              className="mt-6 inline-flex items-center gap-2 rounded-sm bg-mpesa px-6 py-3 text-sm font-bold text-mpesa-foreground transition-transform hover:-translate-y-0.5"
+              className="mt-6 inline-flex items-center gap-2 rounded-sm bg-foreground px-6 py-3 text-sm font-bold text-background transition-transform hover:-translate-y-0.5"
             >
               Start shopping <ArrowRight className="h-4 w-4" />
             </Link>

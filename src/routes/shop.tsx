@@ -10,10 +10,10 @@ export const Route = createFileRoute("/shop")({
       {
         name: "description",
         content:
-          "Browse Vitenge dresses, camp shirts, blazers and headwraps tailored in Kenya. Filter by category and pay with M-Pesa.",
+          "Browse Vitenge dresses, camp shirts, blazers and headwraps tailored in Kenya. Filter by category and order online.",
       },
       { property: "og:title", content: "Shop Vitenge Clothing | KitengeDuka" },
-      { property: "og:description", content: "Kenyan-made Vitenge pieces, paid for with M-Pesa." },
+      { property: "og:description", content: "Kenyan-made Vitenge pieces, delivered countrywide." },
     ],
   }),
   component: Shop,
@@ -44,7 +44,7 @@ function Shop() {
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-terracotta">Duka</p>
         <h1 className="mt-2 font-display text-5xl font-bold">All Vitenge</h1>
         <p className="mt-3 max-w-xl text-muted-foreground">
-          Every piece is made-to-order in Kenya. Prices in Kenyan shillings, payment via M-Pesa.
+          Every piece is made-to-order in Kenya. Prices in Kenyan shillings.
         </p>
       </header>
 
