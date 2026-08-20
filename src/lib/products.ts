@@ -12,7 +12,7 @@ import meruWaistcoat from "@/assets/meru-waistcoat.jpg";
 import thikaDashiki from "@/assets/thika-dashiki.jpg";
 import kitaleKidsShirt from "@/assets/kitale-kids-shirt.jpg";
 import naivashaSkirt from "@/assets/naivasha-skirt.jpg";
-import dianiBeachSet from "@/assets/diani-beach-set.jpg";
+import taitaSafariVest from "@/assets/taita-safari-vest.jpg";
 import machakosJumpsuit from "@/assets/machakos-jumpsuit.jpg";
 import garissaKanzu from "@/assets/garissa-kanzu.jpg";
 import nyeriPeplum from "@/assets/nyeri-peplum.jpg";
@@ -198,16 +198,15 @@ export const products: Product[] = [
     stock: 11,
   },
   {
-    id: "diani-beach-set",
-    name: "Diani Beach Set",
-    subtitle: "Shirt and shorts co-ord",
-    price: 4300,
-    compareAt: 4900,
-    image: dianiBeachSet,
+    id: "taita-safari-vest",
+    name: "Taita Safari Vest",
+    subtitle: "Utility vest with kitenge lining",
+    price: 3300,
+    image: taitaSafariVest,
     category: "Men",
     sizes: MEN,
-    county: "Kwale",
-    stock: 6,
+    county: "Taita-Taveta",
+    stock: 8,
   },
   {
     id: "machakos-jumpsuit",

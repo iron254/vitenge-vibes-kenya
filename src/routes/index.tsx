@@ -56,25 +56,7 @@ function Home() {
               >
                 Shop the collection <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link
-                to="/about"
-                className="inline-flex items-center rounded-sm border border-foreground px-5 py-3 text-sm font-bold transition-colors hover:bg-muted"
-              >
-                Meet our tailors
-              </Link>
             </div>
-            <dl className="mt-10 grid max-w-sm grid-cols-3 gap-4 border-t border-border pt-6">
-              {[
-                ["1,400+", "Orders sewn"],
-                ["47", "Counties served"],
-                ["3", "Day delivery"],
-              ].map(([value, label]) => (
-                <div key={label}>
-                  <dt className="font-display text-2xl font-bold">{value}</dt>
-                  <dd className="text-xs text-muted-foreground">{label}</dd>
-                </div>
-              ))}
-            </dl>
           </div>
 
           <div className="relative">

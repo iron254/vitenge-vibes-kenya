@@ -22,11 +22,6 @@ export function ProductCard({ product }: { product: Product }) {
             {product.tag}
           </span>
         )}
-        {product.stock <= 4 && (
-          <span className="absolute right-3 top-3 rounded-sm bg-background/90 px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-destructive">
-            {product.stock} left
-          </span>
-        )}
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-4">
