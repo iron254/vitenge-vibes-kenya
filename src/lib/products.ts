@@ -3,6 +3,29 @@ import p2 from "@/assets/p2.jpg";
 import p3 from "@/assets/p3.jpg";
 import p4 from "@/assets/p4.jpg";
 import fabric from "@/assets/fabric.jpg";
+import nairobiWrap from "@/assets/nairobi-wrap-dress.jpg";
+import malindiKaftan from "@/assets/malindi-kaftan.jpg";
+import eldoretBomber from "@/assets/eldoret-bomber.jpg";
+import kisiiTwoPiece from "@/assets/kisii-two-piece.jpg";
+import lamuShirtDress from "@/assets/lamu-shirt-dress.jpg";
+import meruWaistcoat from "@/assets/meru-waistcoat.jpg";
+import thikaDashiki from "@/assets/thika-dashiki.jpg";
+import kitaleKidsShirt from "@/assets/kitale-kids-shirt.jpg";
+import naivashaSkirt from "@/assets/naivasha-skirt.jpg";
+import dianiBeachSet from "@/assets/diani-beach-set.jpg";
+import machakosJumpsuit from "@/assets/machakos-jumpsuit.jpg";
+import garissaKanzu from "@/assets/garissa-kanzu.jpg";
+import nyeriPeplum from "@/assets/nyeri-peplum.jpg";
+import kerichoTrench from "@/assets/kericho-trench.jpg";
+import turkanaPoncho from "@/assets/turkana-poncho.jpg";
+import bungomaShorts from "@/assets/bungoma-shorts.jpg";
+import kakamegaShirt from "@/assets/kakamega-shirt.jpg";
+import embuHeadwrap from "@/assets/embu-headwrap.jpg";
+import kituiTote from "@/assets/kitui-tote.jpg";
+import mombasaBowTie from "@/assets/mombasa-bow-tie.jpg";
+import isioloSandals from "@/assets/isiolo-sandals.jpg";
+import homabayScrunchies from "@/assets/homabay-scrunchies.jpg";
+import kongoweaFabric from "@/assets/kongowea-fabric.jpg";
 
 export type Product = {
   id: string;
@@ -77,7 +100,7 @@ export const products: Product[] = [
     name: "Nairobi Wrap Dress",
     subtitle: "Tie-waist midi wrap",
     price: 4200,
-    image: p2,
+    image: nairobiWrap,
     category: "Women",
     tag: "Bestseller",
     sizes: WOMEN,
@@ -89,7 +112,7 @@ export const products: Product[] = [
     name: "Malindi Kaftan",
     subtitle: "Loose coastal kaftan",
     price: 3600,
-    image: p2,
+    image: malindiKaftan,
     category: "Women",
     sizes: WOMEN,
     county: "Kilifi",
@@ -101,7 +124,7 @@ export const products: Product[] = [
     subtitle: "Lined kitenge bomber",
     price: 5400,
     compareAt: 6200,
-    image: p3,
+    image: eldoretBomber,
     category: "Men",
     sizes: MEN,
     county: "Uasin Gishu",
@@ -112,7 +135,7 @@ export const products: Product[] = [
     name: "Kisii Two-Piece Set",
     subtitle: "Crop top and wide trousers",
     price: 5200,
-    image: p2,
+    image: kisiiTwoPiece,
     category: "Women",
     tag: "New drop",
     sizes: WOMEN,
@@ -124,7 +147,7 @@ export const products: Product[] = [
     name: "Lamu Shirt Dress",
     subtitle: "Button-through shirt dress",
     price: 3900,
-    image: p2,
+    image: lamuShirtDress,
     category: "Women",
     sizes: WOMEN,
     county: "Lamu",
@@ -135,7 +158,7 @@ export const products: Product[] = [
     name: "Meru Waistcoat",
     subtitle: "Formal kitenge waistcoat",
     price: 3100,
-    image: p3,
+    image: meruWaistcoat,
     category: "Men",
     sizes: MEN,
     county: "Meru",
@@ -146,7 +169,7 @@ export const products: Product[] = [
     name: "Thika Dashiki Top",
     subtitle: "Classic embroidered dashiki",
     price: 2400,
-    image: p1,
+    image: thikaDashiki,
     category: "Men",
     sizes: MEN,
     county: "Kiambu",
@@ -157,7 +180,7 @@ export const products: Product[] = [
     name: "Kitale Boys Shirt",
     subtitle: "Kids' short-sleeve shirt",
     price: 1400,
-    image: p1,
+    image: kitaleKidsShirt,
     category: "Men",
     sizes: ["2Y", "4Y", "6Y", "8Y"],
     county: "Trans Nzoia",
@@ -168,7 +191,7 @@ export const products: Product[] = [
     name: "Naivasha A-Line Skirt",
     subtitle: "High-waist midi skirt",
     price: 2600,
-    image: p2,
+    image: naivashaSkirt,
     category: "Women",
     sizes: WOMEN,
     county: "Nakuru",
@@ -180,7 +203,7 @@ export const products: Product[] = [
     subtitle: "Shirt and shorts co-ord",
     price: 4300,
     compareAt: 4900,
-    image: p1,
+    image: dianiBeachSet,
     category: "Men",
     sizes: MEN,
     county: "Kwale",
@@ -191,7 +214,7 @@ export const products: Product[] = [
     name: "Machakos Jumpsuit",
     subtitle: "Wide-leg kitenge jumpsuit",
     price: 5600,
-    image: p2,
+    image: machakosJumpsuit,
     category: "Women",
     tag: "Limited",
     sizes: WOMEN,
@@ -203,7 +226,7 @@ export const products: Product[] = [
     name: "Garissa Long Kanzu",
     subtitle: "Trimmed formal kanzu",
     price: 4700,
-    image: p3,
+    image: garissaKanzu,
     category: "Men",
     sizes: MEN,
     county: "Garissa",
@@ -214,7 +237,7 @@ export const products: Product[] = [
     name: "Nyeri Peplum Top",
     subtitle: "Structured peplum blouse",
     price: 2900,
-    image: p2,
+    image: nyeriPeplum,
     category: "Women",
     sizes: WOMEN,
     county: "Nyeri",
@@ -225,7 +248,7 @@ export const products: Product[] = [
     name: "Kericho Trench Coat",
     subtitle: "Lightweight printed trench",
     price: 7200,
-    image: p3,
+    image: kerichoTrench,
     category: "Women",
     tag: "Limited",
     sizes: WOMEN,
@@ -237,7 +260,7 @@ export const products: Product[] = [
     name: "Turkana Poncho",
     subtitle: "Loose printed poncho",
     price: 3300,
-    image: p2,
+    image: turkanaPoncho,
     category: "Women",
     sizes: ONE,
     county: "Turkana",
@@ -248,7 +271,7 @@ export const products: Product[] = [
     name: "Bungoma Tailored Shorts",
     subtitle: "Knee-length kitenge shorts",
     price: 2100,
-    image: p1,
+    image: bungomaShorts,
     category: "Men",
     sizes: MEN,
     county: "Bungoma",
@@ -259,7 +282,7 @@ export const products: Product[] = [
     name: "Kakamega Long Shirt",
     subtitle: "Long-sleeve print shirt",
     price: 3200,
-    image: p1,
+    image: kakamegaShirt,
     category: "Men",
     sizes: MEN,
     county: "Kakamega",
@@ -270,7 +293,7 @@ export const products: Product[] = [
     name: "Embu Headwrap",
     subtitle: "Pre-tied gele headwrap",
     price: 900,
-    image: p4,
+    image: embuHeadwrap,
     category: "Accessories",
     sizes: ONE,
     county: "Embu",
@@ -281,7 +304,7 @@ export const products: Product[] = [
     name: "Kitui Market Tote",
     subtitle: "Lined kitenge tote bag",
     price: 1500,
-    image: p4,
+    image: kituiTote,
     category: "Accessories",
     tag: "Bestseller",
     sizes: ONE,
@@ -293,7 +316,7 @@ export const products: Product[] = [
     name: "Mombasa Bow Tie & Pocket Square",
     subtitle: "Groomsmen accessory pair",
     price: 1200,
-    image: p4,
+    image: mombasaBowTie,
     category: "Accessories",
     sizes: ONE,
     county: "Mombasa",
@@ -304,7 +327,7 @@ export const products: Product[] = [
     name: "Isiolo Print Sandals",
     subtitle: "Kitenge-wrapped flat sandals",
     price: 2200,
-    image: p4,
+    image: isioloSandals,
     category: "Accessories",
     sizes: ["36", "37", "38", "39", "40"],
     county: "Isiolo",
@@ -315,7 +338,7 @@ export const products: Product[] = [
     name: "Homa Bay Scrunchie Pack",
     subtitle: "Set of five print scrunchies",
     price: 600,
-    image: p4,
+    image: homabayScrunchies,
     category: "Accessories",
     sizes: ONE,
     county: "Homa Bay",
@@ -337,7 +360,7 @@ export const products: Product[] = [
     name: "Kongowea Wax Print · 3m",
     subtitle: "Cotton wax fabric half roll",
     price: 1900,
-    image: fabric,
+    image: kongoweaFabric,
     category: "Fabric",
     sizes: ["3 metres"],
     county: "Mombasa",
