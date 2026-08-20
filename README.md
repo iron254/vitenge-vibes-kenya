@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Vitenge Vibes Kenya
+
+I want to build a clothing website for local people here in Kenya with major focus in "Vitenge" fabric, make it have an Mpesa only payment then put at least 22 design features
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://vitenge-vibes-kenya.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/0670f357-0433-4ed9-aea7-8bd384651a44).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
