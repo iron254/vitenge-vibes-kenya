@@ -9,17 +9,17 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Talk to KitengeDuka about sizing, custom Vitenge orders, delivery or M-Pesa payments. Based on Biashara Street, Nairobi.",
+          "Talk to KitengeDuka about sizing, custom Vitenge orders and delivery. Based on Biashara Street, Nairobi.",
       },
       { property: "og:title", content: "Contact KitengeDuka" },
-      { property: "og:description", content: "Sizing help, custom orders and M-Pesa payment support." },
+      { property: "og:description", content: "Sizing help, custom orders and delivery support." },
     ],
   }),
   component: Contact,
 });
 
 const faqs = [
-  { q: "Which payment methods do you accept?", a: "M-Pesa via STK push at checkout." },
+  { q: "Which payment methods do you accept?", a: "Payment details are confirmed at checkout." },
   { q: "How long is delivery?", a: "Nairobi 1 day, other counties 2–3 days through our courier partners." },
   { q: "Can I order a custom size?", a: "Yes. WhatsApp your bust, waist and length measurements and we sew to fit." },
   { q: "Do you accept returns?", a: "Exchanges within 7 days if the piece is unworn and tags are intact." },
@@ -34,7 +34,7 @@ function Contact() {
       <div>
         <h1 className="font-display text-5xl font-bold">Karibu, sema nasi</h1>
         <p className="mt-4 text-muted-foreground">
-          Sizing questions, bulk orders for harusi, or help with an M-Pesa payment — we reply within a few hours.
+          Sizing questions, bulk orders for weddings, or help with an order — we reply within a few hours.
         </p>
         <ul className="mt-8 space-y-4 text-sm">
           <li className="flex items-center gap-3"><Phone className="h-5 w-5 text-terracotta" /> 0769 535 484</li>

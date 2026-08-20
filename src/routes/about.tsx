@@ -21,7 +21,7 @@ const steps = [
   { n: "01", t: "Sourcing", d: "We walk Gikomba and Kongowea weekly, choosing wax prints by hand." },
   { n: "02", t: "Cutting", d: "Fabric is washed, pre-shrunk and cut to your chosen size." },
   { n: "03", t: "Sewing", d: "Five tailor workshops sew the pieces, paid per garment, fairly." },
-  { n: "04", t: "Delivery", d: "Packed in Nairobi and sent countrywide once M-Pesa payment clears." },
+  { n: "04", t: "Delivery", d: "Packed in Nairobi and sent countrywide once your order is confirmed." },
 ];
 
 function About() {
@@ -53,10 +53,10 @@ function About() {
       </div>
 
       <div className="mt-12 rounded-sm bg-primary p-8 text-primary-foreground">
-        <h2 className="font-display text-3xl font-bold">Why M-Pesa only?</h2>
+        <h2 className="font-display text-3xl font-bold">Why we keep it simple</h2>
         <p className="mt-3 text-primary-foreground/80">
-          Nearly every customer we serve pays by phone. Sticking to M-Pesa keeps our fees low, our prices honest, and
-          confirmation instant — no card charges passed on to you.
+          Ordering happens straight from your phone. Fewer middlemen keeps our fees low, our prices honest and
+          confirmation instant.
         </p>
       </div>
     </div>
