@@ -577,7 +577,7 @@ export const products: Product[] = [
   {
     id: "nyamira-duster-coat",
     name: "Nyamira Duster Coat",
-    subtitle: "Monochrome long duster",
+    subtitle: "Colorful printed long duster",
     price: 5900,
     image: nyamiraDusterCoat,
     category: "Women",
