@@ -24,11 +24,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const testimonials = [
-  { name: "Wanjiku M.", town: "Thika", text: "I got my dress within two days. The quality is excellent!" },
-  { name: "Brian O.", town: "Kisumu", text: "The blazer fits perfectly and checkout took ten seconds." },
-  { name: "Amina S.", town: "Mombasa", text: "Prints are bold and the tailoring is clean. I will definitely come back." },
-];
 
 function Home() {
   const featured = products.slice(0, 4);
@@ -140,20 +135,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="font-display text-4xl font-bold">What customers say</h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <blockquote key={t.name} className="rounded-sm bg-card p-6 edge-ink">
-              <p className="text-sm leading-relaxed">“{t.text}”</p>
-              <footer className="mt-4 text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                {t.name} · {t.town}
-              </footer>
-            </blockquote>
-          ))}
-        </div>
-      </section>
 
       {/* Closing CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-4">

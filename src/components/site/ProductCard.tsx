@@ -17,11 +17,6 @@ export function ProductCard({ product }: { product: Product }) {
           height={1100}
           className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        {product.tag && (
-          <span className="absolute left-3 top-3 rounded-sm bg-terracotta px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-background">
-            {product.tag}
-          </span>
-        )}
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-4">
