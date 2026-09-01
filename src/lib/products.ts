@@ -1,6 +1,5 @@
 import p1 from "@/assets/p1.jpg";
 import p2 from "@/assets/p2.jpg";
-import p3 from "@/assets/p3.jpg";
 import p4 from "@/assets/p4.jpg";
 import fabric from "@/assets/fabric.jpg";
 import nairobiWrap from "@/assets/nairobi-wrap-dress.jpg";
@@ -10,7 +9,6 @@ import kisiiTwoPiece from "@/assets/kisii-two-piece.jpg";
 import lamuShirtDress from "@/assets/lamu-shirt-dress.jpg";
 import meruWaistcoat from "@/assets/meru-waistcoat.jpg";
 import thikaDashiki from "@/assets/thika-dashiki.jpg";
-import kitaleKidsShirt from "@/assets/kitale-kids-shirt.jpg";
 import naivashaSkirt from "@/assets/naivasha-skirt.jpg";
 import taitaSafariVest from "@/assets/taita-safari-vest.jpg";
 import machakosJumpsuit from "@/assets/machakos-jumpsuit.jpg";
@@ -27,6 +25,39 @@ import isioloSandals from "@/assets/isiolo-sandals.jpg";
 import homabayScrunchies from "@/assets/homabay-scrunchies.jpg";
 import kongoweaFabric from "@/assets/kongowea-fabric.jpg";
 
+import nakuruDoubleBreasted from "@/assets/nakuru-double-breasted.jpg";
+import siayaHoodie from "@/assets/siaya-print-hoodie.jpg";
+import narokTrousers from "@/assets/narok-print-trousers.jpg";
+import busiaOvershirt from "@/assets/busia-overshirt.jpg";
+import wajirTunic from "@/assets/wajir-tunic.jpg";
+import nandiTrackJacket from "@/assets/nandi-track-jacket.jpg";
+import samburuRobeCoat from "@/assets/samburu-robe-coat.jpg";
+import kilifiPolo from "@/assets/kilifi-polo.jpg";
+import vihigaHatShirt from "@/assets/vihiga-hat-shirt.jpg";
+import lodwarCoordSet from "@/assets/lodwar-coord-set.jpg";
+import kajiadoRuffleGown from "@/assets/kajiado-ruffle-gown.jpg";
+import murangaPencilDress from "@/assets/muranga-pencil-dress.jpg";
+import kiambuWomensSuit from "@/assets/kiambu-womens-suit.jpg";
+import nyandaruaTieredSkirt from "@/assets/nyandarua-tiered-skirt.jpg";
+import baringoPuffBlouse from "@/assets/baringo-puff-blouse.jpg";
+import marsabitWrapJumpsuit from "@/assets/marsabit-wrap-jumpsuit.jpg";
+import tanaKimonoRobe from "@/assets/tana-kimono-robe.jpg";
+import laikipiaRomper from "@/assets/laikipia-romper.jpg";
+import migoriHalterDress from "@/assets/migori-halter-dress.jpg";
+import nyamiraDusterCoat from "@/assets/nyamira-duster-coat.jpg";
+import fabricIndigoRoll from "@/assets/fabric-indigo-roll.jpg";
+import fabricYellowRoll from "@/assets/fabric-yellow-roll.jpg";
+import fabricRedRoll from "@/assets/fabric-red-roll.jpg";
+import fabricTurquoiseRoll from "@/assets/fabric-turquoise-roll.jpg";
+import fabricBrownRoll from "@/assets/fabric-brown-roll.jpg";
+import fabricPurpleRoll from "@/assets/fabric-purple-roll.jpg";
+import accLaptopSleeve from "@/assets/acc-laptop-sleeve.jpg";
+import accSlingBag from "@/assets/acc-sling-bag.jpg";
+import accEarrings from "@/assets/acc-earrings.jpg";
+import accApron from "@/assets/acc-apron.jpg";
+import accMaskSet from "@/assets/acc-mask-set.jpg";
+import accBabyWrap from "@/assets/acc-baby-wrap.jpg";
+
 export type Product = {
   id: string;
   name: string;
@@ -35,7 +66,6 @@ export type Product = {
   compareAt?: number;
   image: string;
   category: "Women" | "Men" | "Accessories" | "Fabric";
-  tag?: string;
   sizes: string[];
   county: string;
   stock: number;
@@ -54,7 +84,6 @@ export const products: Product[] = [
     compareAt: 3500,
     image: p1,
     category: "Men",
-    tag: "Bestseller",
     sizes: MEN,
     county: "Nairobi",
     stock: 6,
@@ -66,23 +95,9 @@ export const products: Product[] = [
     price: 4900,
     image: p2,
     category: "Women",
-    tag: "New drop",
     sizes: WOMEN,
     county: "Mombasa",
     stock: 3,
-  },
-  {
-    id: "koti-msitu",
-    name: "Forest Tailored Blazer",
-    subtitle: "Men's fitted blazer",
-    price: 6500,
-    compareAt: 7800,
-    image: p3,
-    category: "Men",
-    tag: "Limited",
-    sizes: ["M", "L", "XL"],
-    county: "Kisumu",
-    stock: 4,
   },
   {
     id: "kilemba-set",
@@ -102,7 +117,6 @@ export const products: Product[] = [
     price: 4200,
     image: nairobiWrap,
     category: "Women",
-    tag: "Bestseller",
     sizes: WOMEN,
     county: "Nairobi",
     stock: 9,
@@ -137,7 +151,6 @@ export const products: Product[] = [
     price: 5200,
     image: kisiiTwoPiece,
     category: "Women",
-    tag: "New drop",
     sizes: WOMEN,
     county: "Kisii",
     stock: 4,
@@ -176,17 +189,6 @@ export const products: Product[] = [
     stock: 14,
   },
   {
-    id: "kitale-kids-shirt",
-    name: "Kitale Boys Shirt",
-    subtitle: "Kids' short-sleeve shirt",
-    price: 1400,
-    image: kitaleKidsShirt,
-    category: "Men",
-    sizes: ["2Y", "4Y", "6Y", "8Y"],
-    county: "Trans Nzoia",
-    stock: 16,
-  },
-  {
     id: "naivasha-skirt",
     name: "Naivasha A-Line Skirt",
     subtitle: "High-waist midi skirt",
@@ -215,7 +217,6 @@ export const products: Product[] = [
     price: 5600,
     image: machakosJumpsuit,
     category: "Women",
-    tag: "Limited",
     sizes: WOMEN,
     county: "Machakos",
     stock: 3,
@@ -249,7 +250,6 @@ export const products: Product[] = [
     price: 7200,
     image: kerichoTrench,
     category: "Women",
-    tag: "Limited",
     sizes: WOMEN,
     county: "Kericho",
     stock: 2,
@@ -305,7 +305,6 @@ export const products: Product[] = [
     price: 1500,
     image: kituiTote,
     category: "Accessories",
-    tag: "Bestseller",
     sizes: ONE,
     county: "Kitui",
     stock: 18,
@@ -364,6 +363,359 @@ export const products: Product[] = [
     sizes: ["3 metres"],
     county: "Mombasa",
     stock: 22,
+  },
+  {
+    id: "nakuru-double-breasted",
+    name: "Nakuru Double-Breasted Jacket",
+    subtitle: "Structured print suit jacket",
+    price: 6800,
+    compareAt: 7600,
+    image: nakuruDoubleBreasted,
+    category: "Men",
+    sizes: MEN,
+    county: "Nakuru",
+    stock: 6,
+  },
+  {
+    id: "siaya-print-hoodie",
+    name: "Siaya Print Hoodie",
+    subtitle: "Panelled cotton hoodie",
+    price: 3900,
+    image: siayaHoodie,
+    category: "Men",
+    sizes: MEN,
+    county: "Siaya",
+    stock: 10,
+  },
+  {
+    id: "narok-print-trousers",
+    name: "Narok Print Trousers",
+    subtitle: "Tapered tailored trousers",
+    price: 3400,
+    image: narokTrousers,
+    category: "Men",
+    sizes: MEN,
+    county: "Narok",
+    stock: 9,
+  },
+  {
+    id: "busia-overshirt",
+    name: "Busia Overshirt",
+    subtitle: "Boxy button-up overshirt",
+    price: 3000,
+    image: busiaOvershirt,
+    category: "Men",
+    sizes: MEN,
+    county: "Busia",
+    stock: 12,
+  },
+  {
+    id: "wajir-tunic",
+    name: "Wajir Mandarin Tunic",
+    subtitle: "Short-sleeve collarless tunic",
+    price: 2700,
+    image: wajirTunic,
+    category: "Men",
+    sizes: MEN,
+    county: "Wajir",
+    stock: 11,
+  },
+  {
+    id: "nandi-track-jacket",
+    name: "Nandi Track Jacket",
+    subtitle: "Zip jacket with contrast sleeves",
+    price: 4300,
+    image: nandiTrackJacket,
+    category: "Men",
+    sizes: MEN,
+    county: "Nandi",
+    stock: 7,
+  },
+  {
+    id: "samburu-robe-coat",
+    name: "Samburu Robe Coat",
+    subtitle: "Full-length ceremonial robe",
+    price: 7400,
+    image: samburuRobeCoat,
+    category: "Men",
+    sizes: MEN,
+    county: "Samburu",
+    stock: 4,
+  },
+  {
+    id: "kilifi-polo",
+    name: "Kilifi Print Polo",
+    subtitle: "Knit-collar print polo",
+    price: 2500,
+    image: kilifiPolo,
+    category: "Men",
+    sizes: MEN,
+    county: "Kilifi",
+    stock: 15,
+  },
+  {
+    id: "vihiga-hat-shirt",
+    name: "Vihiga Shirt & Bucket Hat",
+    subtitle: "Matching shirt and hat set",
+    price: 3800,
+    image: vihigaHatShirt,
+    category: "Men",
+    sizes: MEN,
+    county: "Vihiga",
+    stock: 8,
+  },
+  {
+    id: "lodwar-coord-set",
+    name: "Lodwar Shirt & Shorts Set",
+    subtitle: "Two-piece co-ord set",
+    price: 4100,
+    image: lodwarCoordSet,
+    category: "Men",
+    sizes: MEN,
+    county: "Turkana",
+    stock: 6,
+  },
+  {
+    id: "kajiado-ruffle-gown",
+    name: "Kajiado Ruffle Gown",
+    subtitle: "Off-shoulder floor-length gown",
+    price: 6900,
+    image: kajiadoRuffleGown,
+    category: "Women",
+    sizes: WOMEN,
+    county: "Kajiado",
+    stock: 5,
+  },
+  {
+    id: "muranga-pencil-dress",
+    name: "Murang'a Pencil Dress",
+    subtitle: "Fitted cap-sleeve office dress",
+    price: 4400,
+    image: murangaPencilDress,
+    category: "Women",
+    sizes: WOMEN,
+    county: "Murang'a",
+    stock: 8,
+  },
+  {
+    id: "kiambu-womens-suit",
+    name: "Kiambu Blazer Suit",
+    subtitle: "Blazer and wide trouser set",
+    price: 7800,
+    image: kiambuWomensSuit,
+    category: "Women",
+    sizes: WOMEN,
+    county: "Kiambu",
+    stock: 4,
+  },
+  {
+    id: "nyandarua-tiered-skirt",
+    name: "Nyandarua Tiered Skirt",
+    subtitle: "Three-tier maxi skirt",
+    price: 3600,
+    image: nyandaruaTieredSkirt,
+    category: "Women",
+    sizes: WOMEN,
+    county: "Nyandarua",
+    stock: 9,
+  },
+  {
+    id: "baringo-puff-blouse",
+    name: "Baringo Puff-Sleeve Blouse",
+    subtitle: "Statement sleeve blouse",
+    price: 2800,
+    image: baringoPuffBlouse,
+    category: "Women",
+    sizes: WOMEN,
+    county: "Baringo",
+    stock: 13,
+  },
+  {
+    id: "marsabit-wrap-jumpsuit",
+    name: "Marsabit Wrap Jumpsuit",
+    subtitle: "Belted wrap jumpsuit",
+    price: 5300,
+    image: marsabitWrapJumpsuit,
+    category: "Women",
+    sizes: WOMEN,
+    county: "Marsabit",
+    stock: 6,
+  },
+  {
+    id: "tana-kimono-robe",
+    name: "Tana Kimono Robe",
+    subtitle: "Open-front printed robe",
+    price: 4600,
+    image: tanaKimonoRobe,
+    category: "Women",
+    sizes: WOMEN,
+    county: "Tana River",
+    stock: 7,
+  },
+  {
+    id: "laikipia-romper",
+    name: "Laikipia Romper",
+    subtitle: "Relaxed short playsuit",
+    price: 3100,
+    image: laikipiaRomper,
+    category: "Women",
+    sizes: WOMEN,
+    county: "Laikipia",
+    stock: 10,
+  },
+  {
+    id: "migori-halter-dress",
+    name: "Migori Halter Dress",
+    subtitle: "Halter-neck pleated midi",
+    price: 4000,
+    image: migoriHalterDress,
+    category: "Women",
+    sizes: WOMEN,
+    county: "Migori",
+    stock: 8,
+  },
+  {
+    id: "nyamira-duster-coat",
+    name: "Nyamira Duster Coat",
+    subtitle: "Monochrome long duster",
+    price: 5900,
+    image: nyamiraDusterCoat,
+    category: "Women",
+    sizes: WOMEN,
+    county: "Nyamira",
+    stock: 5,
+  },
+  {
+    id: "fabric-indigo-6m",
+    name: "Indigo Geometric Wax Print · 6m",
+    subtitle: "Cotton wax fabric by the roll",
+    price: 3600,
+    image: fabricIndigoRoll,
+    category: "Fabric",
+    sizes: ["6 metres"],
+    county: "Nairobi",
+    stock: 14,
+  },
+  {
+    id: "fabric-yellow-3m",
+    name: "Sunflower Wax Print · 3m",
+    subtitle: "Cotton wax fabric half roll",
+    price: 1950,
+    image: fabricYellowRoll,
+    category: "Fabric",
+    sizes: ["3 metres"],
+    county: "Kisumu",
+    stock: 18,
+  },
+  {
+    id: "fabric-red-6m",
+    name: "Crimson Swirl Wax Print · 6m",
+    subtitle: "Cotton wax fabric by the roll",
+    price: 3700,
+    image: fabricRedRoll,
+    category: "Fabric",
+    sizes: ["6 metres"],
+    county: "Nakuru",
+    stock: 12,
+  },
+  {
+    id: "fabric-turquoise-3m",
+    name: "Coastal Coral Wax Print · 3m",
+    subtitle: "Cotton wax fabric half roll",
+    price: 2000,
+    image: fabricTurquoiseRoll,
+    category: "Fabric",
+    sizes: ["3 metres"],
+    county: "Mombasa",
+    stock: 16,
+  },
+  {
+    id: "fabric-brown-6m",
+    name: "Earth Tribal Wax Print · 6m",
+    subtitle: "Cotton wax fabric by the roll",
+    price: 3400,
+    image: fabricBrownRoll,
+    category: "Fabric",
+    sizes: ["6 metres"],
+    county: "Machakos",
+    stock: 11,
+  },
+  {
+    id: "fabric-purple-3m",
+    name: "Violet Bloom Wax Print · 3m",
+    subtitle: "Cotton wax fabric half roll",
+    price: 2100,
+    image: fabricPurpleRoll,
+    category: "Fabric",
+    sizes: ["3 metres"],
+    county: "Eldoret",
+    stock: 13,
+  },
+  {
+    id: "acc-laptop-sleeve",
+    name: "Padded Laptop Sleeve",
+    subtitle: "Lined 14-inch print sleeve",
+    price: 1800,
+    image: accLaptopSleeve,
+    category: "Accessories",
+    sizes: ["14 inch"],
+    county: "Nairobi",
+    stock: 20,
+  },
+  {
+    id: "acc-sling-bag",
+    name: "Crossbody Sling Bag",
+    subtitle: "Compact print sling bag",
+    price: 2400,
+    image: accSlingBag,
+    category: "Accessories",
+    sizes: ONE,
+    county: "Kisumu",
+    stock: 14,
+  },
+  {
+    id: "acc-earrings",
+    name: "Teardrop Fabric Earrings",
+    subtitle: "Lightweight print earrings",
+    price: 700,
+    image: accEarrings,
+    category: "Accessories",
+    sizes: ONE,
+    county: "Nakuru",
+    stock: 30,
+  },
+  {
+    id: "acc-apron",
+    name: "Kitchen Print Apron",
+    subtitle: "Adjustable cotton apron",
+    price: 1600,
+    image: accApron,
+    category: "Accessories",
+    sizes: ONE,
+    county: "Thika",
+    stock: 17,
+  },
+  {
+    id: "acc-mask-set",
+    name: "Mask & Pocket Square Set",
+    subtitle: "Matching two-piece set",
+    price: 850,
+    image: accMaskSet,
+    category: "Accessories",
+    sizes: ONE,
+    county: "Mombasa",
+    stock: 26,
+  },
+  {
+    id: "acc-baby-wrap",
+    name: "Baby Carrier Wrap",
+    subtitle: "Soft cotton carrying wrap",
+    price: 1700,
+    image: accBabyWrap,
+    category: "Accessories",
+    sizes: ONE,
+    county: "Kakamega",
+    stock: 19,
   },
 ];
 
