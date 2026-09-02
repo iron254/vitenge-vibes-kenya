@@ -139,10 +139,8 @@ export function CartDrawer() {
               </p>
             </div>
           )}
+        </div>
 
-        </div>
-          )}
-        </div>
 
         {(stage === "cart" || stage === "details") && lines.length > 0 && (
           <div className="space-y-3 border-t border-border px-5 py-4">
