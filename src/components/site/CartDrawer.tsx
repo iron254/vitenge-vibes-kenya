@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
-import { CheckCircle2, Loader2, Minus, Plus, Smartphone, Trash2, X } from "lucide-react";
+import { Loader2, Minus, Plus, Smartphone, Trash2, X } from "lucide-react";
+import { useNavigate } from "@tanstack/react-router";
 import { useCart } from "@/lib/cart";
 import { KES } from "@/lib/products";
+import { createOrder } from "@/lib/orders.functions";
 
-const TILL = "";
-
-type Stage = "cart" | "details" | "pending" | "done";
+type Stage = "cart" | "details" | "pending";
 
 export function CartDrawer() {
   const { lines, subtotal, count, open, setOpen, remove, setQty, clear } = useCart();
+  const navigate = useNavigate();
   const [stage, setStage] = useState<Stage>("cart");
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
   const [town, setTown] = useState("");
   const [error, setError] = useState<string | null>(null);
-  const [ref, setRef] = useState("");
 
   const delivery = subtotal === 0 || subtotal >= 5000 ? 0 : 350;
   const total = subtotal + delivery;
@@ -34,18 +34,36 @@ export function CartDrawer() {
     return null;
   };
 
-  const pay = () => {
+  const pay = async () => {
     const msisdn = normalize(phone);
     if (!name.trim()) return setError("Please enter your name.");
     if (!town.trim()) return setError("Add the town for delivery.");
     if (!msisdn) return setError("Enter a valid Safaricom number, e.g. 0769 535 484.");
     setError(null);
     setStage("pending");
-    window.setTimeout(() => {
-      setRef(`Q${Math.random().toString(36).slice(2, 8).toUpperCase()}`);
-      setStage("done");
+    try {
+      const result = await createOrder({
+        data: {
+          name: name.trim(),
+          phone: msisdn,
+          town: town.trim(),
+          items: lines.map((l) => ({
+            name: l.name,
+            size: l.size,
+            price: l.price,
+            qty: l.qty,
+            image: l.image,
+          })),
+        },
+      });
       clear();
-    }, 2600);
+      setStage("cart");
+      setOpen(false);
+      navigate({ to: "/order/$reference", params: { reference: result.reference } });
+    } catch {
+      setStage("details");
+      setError("We couldn't complete your order. Please try again.");
+    }
   };
 
   if (!open) return null;
@@ -60,7 +78,7 @@ export function CartDrawer() {
       <aside className="relative flex h-full w-full max-w-md flex-col border-l border-border bg-background shadow-lift animate-rise">
         <div className="flex items-center justify-between border-b border-border px-5 py-4">
           <h2 className="font-display text-lg font-bold">
-            {stage === "cart" ? `Cart (${count})` : stage === "done" ? "Payment complete" : "Pay with M-Pesa"}
+            {stage === "cart" ? `Cart (${count})` : "Pay with M-Pesa"}
           </h2>
           <button onClick={() => setOpen(false)} aria-label="Close" className="rounded-sm p-1 hover:bg-muted">
             <X className="h-5 w-5" />
@@ -121,23 +139,8 @@ export function CartDrawer() {
               </p>
             </div>
           )}
-
-          {stage === "done" && (
-            <div className="mt-16 flex flex-col items-center gap-4 text-center">
-              <CheckCircle2 className="h-12 w-12 text-mpesa" />
-              <p className="font-display text-xl font-bold">Thank you, {name.split(" ")[0]}!</p>
-              <p className="max-w-xs text-sm text-muted-foreground">
-                Payment received. M-Pesa code <span className="font-bold text-foreground">{ref}</span>. We'll call you before delivery to {town}.
-              </p>
-              <button
-                onClick={() => { setStage("cart"); setOpen(false); }}
-                className="rounded-sm bg-foreground px-4 py-2 text-sm font-semibold text-background"
-              >
-                Continue shopping
-              </button>
-            </div>
-          )}
         </div>
+
 
         {(stage === "cart" || stage === "details") && lines.length > 0 && (
           <div className="space-y-3 border-t border-border px-5 py-4">
