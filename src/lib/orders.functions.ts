@@ -69,7 +69,7 @@ export const getOrder = createServerFn({ method: "GET" })
 
     const { data: order } = await supabaseAdmin
       .from("orders")
-      .select("reference, customer_name, phone, town, subtotal, delivery, total, status, created_at")
+      .select("id, reference, customer_name, phone, town, subtotal, delivery, total, status, created_at")
       .eq("reference", data.reference)
       .maybeSingle();
 
@@ -78,7 +78,8 @@ export const getOrder = createServerFn({ method: "GET" })
     const { data: items } = await supabaseAdmin
       .from("order_items")
       .select("product_name, size, unit_price, qty, image")
-      .eq("order_id", (await supabaseAdmin.from("orders").select("id").eq("reference", data.reference).single()).data!.id);
+      .eq("order_id", order.id);
 
-    return { order, items: items ?? [] };
+    const { id: _id, ...publicOrder } = order;
+    return { order: publicOrder, items: items ?? [] };
   });
