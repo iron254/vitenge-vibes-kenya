@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
-import { CheckCircle2, Loader2, Minus, Plus, Smartphone, Trash2, X } from "lucide-react";
+import { Loader2, Minus, Plus, Smartphone, Trash2, X } from "lucide-react";
+import { useNavigate } from "@tanstack/react-router";
 import { useCart } from "@/lib/cart";
 import { KES } from "@/lib/products";
+import { createOrder } from "@/lib/orders.functions";
 
-const TILL = "";
-
-type Stage = "cart" | "details" | "pending" | "done";
+type Stage = "cart" | "details" | "pending";
 
 export function CartDrawer() {
   const { lines, subtotal, count, open, setOpen, remove, setQty, clear } = useCart();
+  const navigate = useNavigate();
   const [stage, setStage] = useState<Stage>("cart");
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
   const [town, setTown] = useState("");
   const [error, setError] = useState<string | null>(null);
-  const [ref, setRef] = useState("");
 
   const delivery = subtotal === 0 || subtotal >= 5000 ? 0 : 350;
   const total = subtotal + delivery;
@@ -34,19 +34,38 @@ export function CartDrawer() {
     return null;
   };
 
-  const pay = () => {
+  const pay = async () => {
     const msisdn = normalize(phone);
     if (!name.trim()) return setError("Please enter your name.");
     if (!town.trim()) return setError("Add the town for delivery.");
     if (!msisdn) return setError("Enter a valid Safaricom number, e.g. 0769 535 484.");
     setError(null);
     setStage("pending");
-    window.setTimeout(() => {
-      setRef(`Q${Math.random().toString(36).slice(2, 8).toUpperCase()}`);
-      setStage("done");
+    try {
+      const result = await createOrder({
+        data: {
+          name: name.trim(),
+          phone: msisdn,
+          town: town.trim(),
+          items: lines.map((l) => ({
+            name: l.name,
+            size: l.size,
+            price: l.price,
+            qty: l.qty,
+            image: l.image,
+          })),
+        },
+      });
       clear();
-    }, 2600);
+      setStage("cart");
+      setOpen(false);
+      navigate({ to: "/order/$reference", params: { reference: result.reference } });
+    } catch {
+      setStage("details");
+      setError("We couldn't complete your order. Please try again.");
+    }
   };
+
 
   if (!open) return null;
 
