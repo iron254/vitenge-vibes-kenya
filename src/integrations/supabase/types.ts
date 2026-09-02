@@ -14,7 +14,86 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      order_items: {
+        Row: {
+          created_at: string
+          id: string
+          image: string | null
+          order_id: string
+          product_name: string
+          qty: number
+          size: string
+          unit_price: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          image?: string | null
+          order_id: string
+          product_name: string
+          qty: number
+          size: string
+          unit_price: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          image?: string | null
+          order_id?: string
+          product_name?: string
+          qty?: number
+          size?: string
+          unit_price?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "order_items_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      orders: {
+        Row: {
+          created_at: string
+          customer_name: string
+          delivery: number
+          id: string
+          phone: string
+          reference: string
+          status: string
+          subtotal: number
+          total: number
+          town: string
+        }
+        Insert: {
+          created_at?: string
+          customer_name: string
+          delivery?: number
+          id?: string
+          phone: string
+          reference: string
+          status?: string
+          subtotal: number
+          total: number
+          town: string
+        }
+        Update: {
+          created_at?: string
+          customer_name?: string
+          delivery?: number
+          id?: string
+          phone?: string
+          reference?: string
+          status?: string
+          subtotal?: number
+          total?: number
+          town?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
