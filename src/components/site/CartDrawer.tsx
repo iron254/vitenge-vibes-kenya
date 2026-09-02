@@ -66,7 +66,6 @@ export function CartDrawer() {
     }
   };
 
-
   if (!open) return null;
 
   return (
@@ -79,7 +78,7 @@ export function CartDrawer() {
       <aside className="relative flex h-full w-full max-w-md flex-col border-l border-border bg-background shadow-lift animate-rise">
         <div className="flex items-center justify-between border-b border-border px-5 py-4">
           <h2 className="font-display text-lg font-bold">
-            {stage === "cart" ? `Cart (${count})` : stage === "done" ? "Payment complete" : "Pay with M-Pesa"}
+            {stage === "cart" ? `Cart (${count})` : "Pay with M-Pesa"}
           </h2>
           <button onClick={() => setOpen(false)} aria-label="Close" className="rounded-sm p-1 hover:bg-muted">
             <X className="h-5 w-5" />
@@ -141,20 +140,7 @@ export function CartDrawer() {
             </div>
           )}
 
-          {stage === "done" && (
-            <div className="mt-16 flex flex-col items-center gap-4 text-center">
-              <CheckCircle2 className="h-12 w-12 text-mpesa" />
-              <p className="font-display text-xl font-bold">Thank you, {name.split(" ")[0]}!</p>
-              <p className="max-w-xs text-sm text-muted-foreground">
-                Payment received. M-Pesa code <span className="font-bold text-foreground">{ref}</span>. We'll call you before delivery to {town}.
-              </p>
-              <button
-                onClick={() => { setStage("cart"); setOpen(false); }}
-                className="rounded-sm bg-foreground px-4 py-2 text-sm font-semibold text-background"
-              >
-                Continue shopping
-              </button>
-            </div>
+        </div>
           )}
         </div>
 
