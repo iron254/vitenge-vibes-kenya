@@ -69,6 +69,7 @@ export const createOrder = createServerFn({ method: "POST" })
         delivery,
         total,
         status: "paid",
+        user_id: await currentUserId(),
       })
       .select("id, reference")
       .single();
