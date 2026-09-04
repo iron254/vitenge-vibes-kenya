@@ -1,7 +1,10 @@
-import { Link } from "@tanstack/react-router";
-import { Menu, ShoppingBag, X } from "lucide-react";
+import { Link, useNavigate } from "@tanstack/react-router";
+import { Menu, ShoppingBag, User, X } from "lucide-react";
 import { useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 import { useCart } from "@/lib/cart";
+import { useSession } from "@/lib/auth";
+import { supabase } from "@/integrations/supabase/client";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -13,6 +16,16 @@ const nav = [
 export function Header() {
   const { count, setOpen } = useCart();
   const [menu, setMenu] = useState(false);
+  const { user } = useSession();
+  const navigate = useNavigate();
+  const queryClient = useQueryClient();
+
+  const signOut = async () => {
+    await queryClient.cancelQueries();
+    queryClient.clear();
+    await supabase.auth.signOut();
+    navigate({ to: "/auth", replace: true });
+  };
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/85 backdrop-blur-md">
@@ -41,6 +54,29 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          {user ? (
+            <>
+              <Link
+                to="/account"
+                className="hidden items-center gap-2 rounded-sm border border-border px-3 py-2 text-sm font-semibold hover:border-foreground sm:inline-flex"
+              >
+                <User className="h-4 w-4" /> Account
+              </Link>
+              <button
+                onClick={signOut}
+                className="hidden rounded-sm px-2 py-2 text-sm font-medium text-muted-foreground hover:text-foreground sm:inline-flex"
+              >
+                Sign out
+              </button>
+            </>
+          ) : (
+            <Link
+              to="/auth"
+              className="hidden items-center gap-2 rounded-sm border border-border px-3 py-2 text-sm font-semibold hover:border-foreground sm:inline-flex"
+            >
+              <User className="h-4 w-4" /> Sign in
+            </Link>
+          )}
           <button
             onClick={() => setOpen(true)}
             aria-label="Open cart"
@@ -76,6 +112,26 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          {user ? (
+            <>
+              <Link to="/account" onClick={() => setMenu(false)} className="rounded-sm px-2 py-2 text-sm font-medium hover:bg-muted">
+                Account
+              </Link>
+              <button
+                onClick={() => {
+                  setMenu(false);
+                  void signOut();
+                }}
+                className="rounded-sm px-2 py-2 text-left text-sm font-medium hover:bg-muted"
+              >
+                Sign out
+              </button>
+            </>
+          ) : (
+            <Link to="/auth" onClick={() => setMenu(false)} className="rounded-sm px-2 py-2 text-sm font-medium hover:bg-muted">
+              Sign in
+            </Link>
+          )}
         </nav>
       )}
     </header>

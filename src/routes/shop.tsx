@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { products, type Product } from "@/lib/products";
+import { type Product } from "@/lib/products";
+import { useCatalog } from "@/lib/catalog";
 import { ProductCard } from "@/components/site/ProductCard";
 
 export const Route = createFileRoute("/shop")({
@@ -26,6 +27,7 @@ function Shop() {
   const [category, setCategory] = useState<(typeof categories)[number]>("All");
   const [sort, setSort] = useState<(typeof sorts)[number]>("Featured");
   const [query, setQuery] = useState("");
+  const { data: products } = useCatalog();
 
   const list = useMemo(() => {
     let out: Product[] = products.filter(
@@ -36,7 +38,7 @@ function Shop() {
     if (sort === "Price: low to high") out = [...out].sort((a, b) => a.price - b.price);
     if (sort === "Price: high to low") out = [...out].sort((a, b) => b.price - a.price);
     return out;
-  }, [category, sort, query]);
+  }, [products, category, sort, query]);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
