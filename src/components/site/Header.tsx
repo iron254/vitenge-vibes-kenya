@@ -112,6 +112,26 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          {user ? (
+            <>
+              <Link to="/account" onClick={() => setMenu(false)} className="rounded-sm px-2 py-2 text-sm font-medium hover:bg-muted">
+                Account
+              </Link>
+              <button
+                onClick={() => {
+                  setMenu(false);
+                  void signOut();
+                }}
+                className="rounded-sm px-2 py-2 text-left text-sm font-medium hover:bg-muted"
+              >
+                Sign out
+              </button>
+            </>
+          ) : (
+            <Link to="/auth" onClick={() => setMenu(false)} className="rounded-sm px-2 py-2 text-sm font-medium hover:bg-muted">
+              Sign in
+            </Link>
+          )}
         </nav>
       )}
     </header>
