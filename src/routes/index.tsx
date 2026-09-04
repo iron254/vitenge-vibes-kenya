@@ -2,7 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Ruler, Scissors, Smartphone, Truck } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import fabricImg from "@/assets/fabric.jpg";
-import { products, KES } from "@/lib/products";
+import { KES } from "@/lib/products";
+import { useCatalog } from "@/lib/catalog";
 import { ProductCard } from "@/components/site/ProductCard";
 
 export const Route = createFileRoute("/")({
@@ -26,6 +27,7 @@ export const Route = createFileRoute("/")({
 
 
 function Home() {
+  const { data: products } = useCatalog();
   const featured = products.slice(0, 4);
 
   return (
