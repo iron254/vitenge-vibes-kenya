@@ -54,6 +54,29 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          {user ? (
+            <>
+              <Link
+                to="/account"
+                className="hidden items-center gap-2 rounded-sm border border-border px-3 py-2 text-sm font-semibold hover:border-foreground sm:inline-flex"
+              >
+                <User className="h-4 w-4" /> Account
+              </Link>
+              <button
+                onClick={signOut}
+                className="hidden rounded-sm px-2 py-2 text-sm font-medium text-muted-foreground hover:text-foreground sm:inline-flex"
+              >
+                Sign out
+              </button>
+            </>
+          ) : (
+            <Link
+              to="/auth"
+              className="hidden items-center gap-2 rounded-sm border border-border px-3 py-2 text-sm font-semibold hover:border-foreground sm:inline-flex"
+            >
+              <User className="h-4 w-4" /> Sign in
+            </Link>
+          )}
           <button
             onClick={() => setOpen(true)}
             aria-label="Open cart"
