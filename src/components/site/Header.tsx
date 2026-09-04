@@ -16,6 +16,16 @@ const nav = [
 export function Header() {
   const { count, setOpen } = useCart();
   const [menu, setMenu] = useState(false);
+  const { user } = useSession();
+  const navigate = useNavigate();
+  const queryClient = useQueryClient();
+
+  const signOut = async () => {
+    await queryClient.cancelQueries();
+    queryClient.clear();
+    await supabase.auth.signOut();
+    navigate({ to: "/auth", replace: true });
+  };
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/85 backdrop-blur-md">
